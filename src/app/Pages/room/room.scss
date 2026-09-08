@@ -1,0 +1,51 @@
+.room-container {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: sans-serif;
+}
+
+.room-code {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+section {
+  margin: 24px 0;
+}
+
+.join-form, .add-movie-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.vote-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.vote-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+}

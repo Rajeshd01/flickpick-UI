@@ -1,0 +1,16 @@
+<div class="home-container">
+  <h1>🎬 FlickPick</h1>
+  <p>Create a room, invite friends, vote on what to watch.</p>
+
+  <div class="create-form">
+    <input
+      type="text"
+      placeholder="Enter your name"
+      [(ngModel)]="hostName"
+      (keyup.enter)="createParty()"
+    />
+    <button (click)="createParty()">Create Room</button>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+</div>

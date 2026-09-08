@@ -1,0 +1,40 @@
+<div class="room-container" *ngIf="party() as p">
+  <h1>🎬 {{ p.hostName }}'s Room</h1>
+  <p class="room-code">Room Code: <strong>{{ roomCode }}</strong>
+    <button (click)="copyInviteLink()">Copy Invite Link</button>
+  </p>
+
+  <section class="participants">
+    <h3>Participants ({{ participants().length }}/2 minimum)</h3>
+    <ul>
+      <li *ngFor="let p of participants()">{{ p.name }}</li>
+    </ul>
+
+    <div class="join-form">
+      <input type="text" placeholder="Your name" [(ngModel)]="myName" />
+      <button (click)="joinRoom()">Join Room</button>
+    </div>
+  </section>
+
+  <section class="movies">
+    <h3>Movies</h3>
+    <ul>
+      <li *ngFor="let m of movies()">{{ m.title }} <span class="added-by">— added by {{ m.addedBy }}</span></li>
+    </ul>
+
+    <div class="add-movie-form">
+      <input type="text" placeholder="Movie title" [(ngModel)]="newMovieTitle" />
+      <button (click)="addMovie()">Add Movie</button>
+    </div>
+  </section>
+
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <button
+    class="vote-btn"
+    [disabled]="!canVote"
+    (click)="goToVote()"
+  >
+    {{ canVote ? 'Vote Now' : 'Need 2+ participants to vote' }}
+  </button>
+</div>

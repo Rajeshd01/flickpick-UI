@@ -1,0 +1,18 @@
+<div class="vote-container">
+  <h1>🗳️ Cast Your Vote</h1>
+  <p>Pick your top 3 movies, in order of preference.</p>
+
+  <input type="text" placeholder="Your name" [(ngModel)]="voterName" />
+
+  <div class="rank-row" *ngFor="let rank of [0, 1, 2]">
+    <label>Rank {{ rank + 1 }}:</label>
+    <select [(ngModel)]="rankings[rank]">
+      <option [ngValue]="null">-- Select a movie --</option>
+      <option *ngFor="let m of movies()" [ngValue]="m.id">{{ m.title }}</option>
+    </select>
+  </div>
+
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <button (click)="submitVote()">Submit Vote</button>
+</div>

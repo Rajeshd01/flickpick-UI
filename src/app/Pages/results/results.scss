@@ -1,0 +1,65 @@
+.results-container {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: sans-serif;
+}
+
+.winner-banner {
+  background: #6c5ce7;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.title {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  background: #eee;
+  border-radius: 4px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background: #6c5ce7;
+  height: 100%;
+}
+
+.points {
+  width: 60px;
+  text-align: right;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+<div class="results-container">
+  <h1>🏆 Results</h1>
+
+  <div *ngIf="winner() as w" class="winner-banner">
+    <h2>Winner: {{ w.title }}</h2>
+  </div>
+
+  <div class="leaderboard" *ngIf="scoreRows().length > 0">
+    <div class="score-row" *ngFor="let row of scoreRows()">
+      <span class="title">{{ row.movie.title }}</span>
+      <div class="bar-track">
+        <div class="bar-fill" [style.width.%]="(row.score / scoreRows()[0].score) * 100"></div>
+      </div>
+      <span class="points">{{ row.score }} pts</span>
+    </div>
+  </div>
+
+  <p class="error" *ngIf="errorMessage()">{{ errorMessage() }}</p>
+
+  <div class="actions">
+    <button (click)="closeVoting()">Close Voting</button>
+    <button (click)="backToRoom()">Back to Room</button>
+  </div>
+</div>

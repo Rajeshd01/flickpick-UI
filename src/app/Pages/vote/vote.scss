@@ -1,0 +1,30 @@
+.vote-container {
+  max-width: 400px;
+  margin: 60px auto;
+  font-family: sans-serif;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.rank-row {
+  margin: 12px 0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.error {
+  color: red;
+}
